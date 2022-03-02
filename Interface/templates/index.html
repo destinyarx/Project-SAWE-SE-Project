@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metas -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LionCoders" />
+    <!-- Links -->
+    <link rel="icon" type="image/png" href="../static/images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icofont.min.css">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/css/slick.css" rel="stylesheet" />
+    <link href="../static/css/emojionearea.min.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <!-- Document Title -->
+    <title>Project SAWE</title>
+</head>
+<body>
+  <!-- HEADER SECTION -->  
+  <header id="home">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <!-- Change Logo Img Here -->
+        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../static/images/logo2.png" alt="logo" width="200px" height="400px" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="interactive-menu-button">
+            <a href="#">
+              <span>Menu</span>
+            </a>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!-- Nav Link -->
+              <a class="nav-link" data-scroll href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <!-- Nav Link -->
+              <a class="nav-link" data-scroll href="{{ url_for('about') }}">About Us</a>
+            </li>
+          </ul>
+          <form action='/sentiment'> <a class="contact-btn form-inline my-2 my-lg-0" >
+            <button >Analyze Sentiments</button>
+          </a></form>
+        </div>
+      </nav>
+    </div>
+    <!-- HERO SECTION -->    
+    <div class="container-fluid hero">
+      <img src="../static/images/hero.svg" alt="">
+      <div class="container">
+        <!-- Hero Title -->
+        <h1>Project<br>SAWE</h1>
+        <!-- Hero Title Info -->
+        <p>Project SAWE or Project Sentiment Analysis with Emoji<br> is a current thesis development tool in the <br>College of Computer and Information Sciences</p>
+        <div class="hero-btns">
+          <!-- Hero Btn First -->
+          <a data-scroll href="#get-started">Get Started</a>
+          <!-- Hero Btn Second -->
+          <a data-scroll href="{{ url_for('sentiment') }}">Analyze Sentiments</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="get-started">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-lg-6">
+          
+          <img src="../static/images/aboutimg.svg" alt="">
+        </div>
+        
+        <div class="col-12 col-sm-12 col-lg-6">
+          <h5>Getting Started</h5>
+          <h2>Start Project SAWE</h2>
+          <!-- Replace About Us Text Under -->
+          <p>To Start Project SAWE, you need to input your sentiments in the languages of english, tagalog or mix. This project can also analyze sentiments with emoji.
+            Project SAWE will determine whether your sentiment is positive, neutral or negative.  </p> <br>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- BLOG SECTION -->
+  <section id="blog" class="blog">
+    <div class="container-fluid">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h5>How To Use Project SAWE</h5>
+            <h2>Easy Steps to Start Project SAWE </h2>
+          </div>
+        </div>
+        <div id="blog-drag" class="row blog-slider">
+          <div class="col-12 col-lg-4 blog-box blog-first">
+            <!-- Blog Post Title -->
+            <h6>About Project SAWE</h6>
+            <!-- Blog Post Date -->
+            <p>Project Sentiment Analysis with Emoji</p>
+            <!-- Blog Post -->
+            <p>Project SAWE is a web-based sentiment analysis application that uses Convolution Neural Network to classify sentiments.</p>
+          </div>
+          <div class="col-12 col-lg-4 blog-box">
+            <!-- Blog Post Title -->
+            <h6>1</h6>
+            <!-- Blog Post Date -->
+            <p>Click "Analyze Sentiments" </p>
+            <!-- Blog Post -->
+            <p>This button will redirect you to the page where this application will analyze your desired entered or uploaded sentiments.</p>
+          </div>
+          <div class="col-12 col-lg-4 blog-box">
+            <!-- Blog Post Title -->
+            <h6>2</h6>
+            <!-- Blog Post Date -->
+            <p>Options</p>
+            <!-- Blog Post -->
+            <p>After redirected, you will choose in the "Analyze Your Sentiments" web page to choose between a single or multiple sentiments </p>
+          </div>
+          <!-- Blog Section to be showed on Drag  -->
+          <div class="col-12 col-lg-4 blog-box hiden-blog hide-blog">
+            <!-- Blog Post Title -->
+            <h6>3</h6>
+            <!-- Blog Post Date -->
+            <p>Single Sentiment</p>
+            <!-- Blog Post -->
+            <p>This is where you will enter your sentiment and use the analyze button to see the result of your classified sentiment</p>
+          </div>
+          <div class="col-12 col-lg-4 blog-box hiden-blog  hide-blog">
+            <!-- Blog Post Title -->
+            <h6>4</h6>
+            <!-- Blog Post Date -->
+            <p>Multiple Sentiments</p>
+            <!-- Blog Post -->
+            <p>This is where you will upload your sentiment csv file and will result a summary of your uploaded file and a csv file with classified sentiment </p>
+          </div>
+          <div class="col-12 col-lg-4 blog-box hiden-blog  hide-blog">
+            <!-- Blog Post Title -->
+            <h6>Note:</h6>
+            <!-- Blog Post Date -->
+            <p>Features</p>
+            <!-- Blog Post -->
+            <p>Project SAWE can only accomodate Tagalog, English or Taglish languages only and different emojis that expresses emotions</p>
+          </div>
+        </div>
+        <!-- Blog Button to Show More or Less on Mobile&Tablet View  -->
+        <button class="hide-me" id="blog-btn">Show More Stories</button>
+      </div>
+    </div>
+  </section>  
+  </body>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h5>GROUP 1</h5>
+          <h3>PROJECT SAWE</h3>
+          <ul class="contact-nav">
+            <li><a data-scroll href="{{ url_for('home') }}">Home.</a></li>
+            <li><a data-scroll href="{{ url_for('about') }}">About Us.</a></li>
+          </ul>
+          <h6>© 2021 - Project SAWE,All Right Reserved</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/index-script.js"></script>
+  <script src="../static/js/swal.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/slick.min.js"></script>
+  <script src="../static/js/smooth-scroll.min.js"></script>
+  <script src="../static/js/emojionearea.min.js"></script>
+  <script src="../static/js/main.js"></script>
+  <!-- Scripts Ends -->
+</body>
+</html>
